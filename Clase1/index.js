@@ -1,6 +1,12 @@
-var btn=document.getElementById(user);
+var btn=document.getElementById("btn");
+
+window.onload=cargar();
+
+function cargar(){
+    console.log("boton");
+}
 
 btn.addEventListener("click",e=>{    
-    console.log(btn.value);
+    console.dir(e);
     e.preventDefault();
 })

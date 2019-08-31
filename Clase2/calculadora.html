@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="#">
+
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <fieldset>
+        <legend>Sumar numeros</legend>
+        <br>
+        <span>Ya se puede ver el resultado y se ha guardado</span>
+        <br>
+        <input type="number" id="primerValor" placeholder="primer valor" />+
+        <input type="number" id="segundoValor" placeholder="segundo valor" />
+        <button id="btnSumar">Sumar</button>
+        <button id="btnSumaryGuardar">Sumar y Guardar</button>
+        <br><br>
+        <input type="text" placeholder="resultado" id="resultado" />
+        <br><br>
+        <hr />
+        <br>
+        <h1>Historial de Resultados</h1>
+        <br>
+        <table border="1">
+            <thead>
+                <th>Numero 1</th>
+                <th>Numero 2</th>
+                <th>Resultado</th>
+            </thead>
+            <tbody id='row'>
+            </tbody>
+        </table>
+    </fieldset>
+    <script src="./index.js"></script>
+</body>
+</html>
