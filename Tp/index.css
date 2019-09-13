@@ -1,0 +1,252 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding: 0;
+    font-size: 62.5%;
+    box-sizing: inherit;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    background:rgb(201, 199, 199);
+    flex: auto;
+    flex-flow: row wrap; 
+}
+/*---------Header--------------*/
+.header{
+    height: 80vh;
+    background-image: url(./assets/header.jpg);
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: center;  */
+    
+}
+
+.header__nav{
+    margin: 1rem;
+    /* justify-content: center;
+    align-items: center; */
+    /* background: paleturquoise; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 100%;
+}
+
+.nav__up-left{
+    justify-self: flex-start;
+    margin: 2rem;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    flex-grow: 1;
+    /* background: blueviolet; */
+    display: flex;    
+    justify-content: center;
+}
+
+.nav_content{
+    margin: 2rem;
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;  
+    /* background: palegreen; */
+}
+
+.nav__up-right{
+    text-decoration: none;
+    /* margin: 1rem; */
+    padding: 1rem;
+    color: white;
+    font-size: 1rem;
+}
+
+.header_down{
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* background-color: blue; */
+    margin-left: 20rem;
+}
+
+.header__down-up{
+    padding: 1rem;
+    font-size: 1.7rem;
+    /* background-color: brown; */
+}
+
+.header__down-down{
+    /* align-self: flex-start; */
+    /* margin-left: -19rem; */
+    padding: 1rem;
+    font-size: 1.5rem;
+    /* background-color:gold; */
+}
+
+/*---------Section Uno--------------*/
+.section__body{ 
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background: white;
+
+}
+.sobreNosotros{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    /* background-color: aqua; */
+
+}
+
+.sobreNosotros__title{
+    font-size: 1.7rem;
+    color: black;
+    margin: 1rem;
+    /* background-color: blue; */
+}
+
+.sobreNosotros__content{
+    margin-left: 20rem;
+    margin-right: 20rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    /* background-color: cornflowerblue; */
+}
+
+.sobreNosotros__content-unidad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+    /* background-color: darkslategrey; */
+}
+
+.unidad-img{
+    margin-bottom: 2rem;
+    width: 20%;
+    height: 20%;
+}
+
+.unidad-title{
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.unidad-paragraph{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+
+}
+
+/*---------Section Dos--------------*/
+.casasYdeptos__content-unidad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+    border: 0.1rem solid grey;
+    background-color: rgba(240, 237, 237, 0.932);
+}
+
+.casasYdeptos__unidad-img{
+    width: 100%;
+    height: 40%;
+}
+
+.casasYdeptos__unidad-title{
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+}
+
+.casasYdeptos__unidad-paragraph{
+    margin: 1rem;
+    font-size: .8rem;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.casasYdeptos__unidad-price{
+    font-size: 1rem;
+    margin: 1rem;
+    color: green;
+    display: flex;
+    align-self: flex-start;
+}
+
+.casasYdeptos__unidad-icons{
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-items: center;
+}
+
+.casasYdeptos__unidad-icon{
+    margin: 1rem;
+    margin-left: 3rem;
+    width: 10%;
+    height: 10%;
+    /* background-color: brown; */
+}
+
+.casasYdeptos__unidad-icon-number{
+    /* margin-left: 1rem ; */
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    color: black;
+    /* background-color: aqua; */
+    align-self: center;
+}
+
+.casasYdeptos__unidad-icon-button{
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(236, 75, 47);
+    width: 80%; /* ver si se puede reemplazar por grow*/    
+    display: flex;
+    justify-content: center;
+}
+
+.section__body-button{
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: green;
+    /* display: flex;  */
+    align-self: flex-end;
+    justify-self: flex-end;
+
+}
+
+/*---------Section Tres--------------*/
+
+
+/*---------Section Cuatro--------------*/
