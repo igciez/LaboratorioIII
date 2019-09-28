@@ -1,0 +1,11 @@
+comandos:
+
+1) npx create-react-app "nombre"
+
+2) rm node-modules
+
+3) yarn add redux react-redux react react-router-dom react-table
+
+4) yarn add json-server axios redux-form redux-thunk
+
+5) yarn
