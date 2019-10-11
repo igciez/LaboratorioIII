@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./JS/codigo.js"></script>
+    <link rel="stylesheet" href="./CSS/estiloIndex.css">
+    <title>WEB PAGE CLASE REPASO</title>
+</head>
+
+<body>
+    <div class="principal">
+        <header>
+            <div class="contenedorMenu">
+                <h3 class="menuTitle">UTN FRA - LABO III</h3>
+                <ul class="menu">
+                    <li>
+                        <input type="button" class="btnMenu" value="Home">
+                    </li>
+                    <li>
+                        <input type="button" class="btnMenu" value="About">
+                    </li>
+                    <li>
+                        <input type="button" class="btnMenu" value="Sample Post">
+                    </li>
+                    <li>
+                        <input type="button" class="btnMenu" value="Contact">
+                    </li>
+                    <li>
+                        <input type="button" class="btnMenu btnNewPost" value="New Post" onclick="newPost()">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="titulos">
+                <h1 class="title">Blog Application</h1>
+                <hr class="hrTitle">
+                <h2 class="subtitle">A Blog Application by UTN FRA - Labo III</h2>
+            </div>
+
+        </header>
+
+        <div class="divNuevoPost divNuevoPostInvisible" id="divNuevoPost">
+            <h2 class="nuevoPostTitle">Write your new post</h2>
+            <hr class="separadorNewPost">
+            <label for="txtTitle" class="lblNewPost">Post Title</label>
+            <br />
+            <input type="text" name="txtTitle" id="txtTitle" class="txtNewPost">
+            <br />
+            <label for="txtHeader" class="lblNewPost">Post Header</label>
+            <br />
+            <input type="text" name="txtHeader" id="txtHeader" class="txtNewPost">
+            <br />
+            <label for="txtContenido" class="lblNewPost">Post Text</label>
+            <br />
+            <textarea name="txtContenido" id="txtContenido" cols="30" rows="10"
+                class="txtNewPost txtContenido"></textarea>
+            <br />
+            <hr class="separadorNewPost">
+            <input type="button" class="btnPostear" value="Post" onclick="Postear()">
+        </div>
+
+        <section id="SeccionPosts" class="sectionPosts">
+            <article>
+                <h2 class="titlePost">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <h3 class="headerPost">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sit,
+                    consequatur est qui nobis non, dolores
+                    provident eum, voluptatibus sed corporis et repellendus commodi placeat ipsam inventore fugiat
+                    laborum
+                    officiis.
+                </h3>
+                <h4 class="postedBy">Posted by Author@Author.com on 2018/05 00:00</h4>
+                <p class="textoPost">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur magnam soluta
+                    optio maiores distinctio
+                    harum totam illo sunt, necessitatibus laboriosam adipisci inventore fugit quis, quas sint, nam
+                    voluptatibus.
+                    Veritatis, suscipit?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio unde cum,
+                    corrupti
+                    totam, reiciendis sequi nostrum incidunt quos, perspiciatis id temporibus voluptas eligendi itaque
+                    tempora?
+                    Voluptatem est atque vero consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Odio
+                    aliquid facilis, deleniti distinctio iusto ipsum ipsa totam maiores dolorum earum dolore cupiditate
+                    quasi
+                    reprehenderit corrupti officia rerum? Enim, et ab! Lorem, ipsum dolor sit amet consectetur
+                    adipisicing
+                    elit. Distinctio natus culpa dolores saepe, nemo voluptate suscipit perspiciatis harum porro. Ipsam
+                    dolores
+                    animi quasi suscipit iste nesciunt veritatis, asperiores quos provident! Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit. Consequatur magnam soluta optio maiores distinctio harum totam illo
+                    sunt,
+                    necessitatibus laboriosam adipisci inventore fugit quis, quas sint, nam voluptatibus. Veritatis,
+                    suscipit?Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit. Odio unde cum, corrupti totam, reiciendis sequi
+                    nostrum
+                    incidunt quos, perspiciatis id temporibus voluptas eligendi itaque tempora? Voluptatem est atque
+                    vero
+                    consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio aliquid facilis,
+                    deleniti
+                    distinctio iusto ipsum ipsa totam maiores dolorum earum dolore cupiditate quasi reprehenderit
+                    corrupti
+                    officia rerum? Enim, et ab! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                    natus
+                    culpa dolores saepe, nemo voluptate suscipit perspiciatis harum porro. Ipsam dolores animi quasi
+                    suscipit
+                    iste nesciunt veritatis, asperiores quos provident! Lorem ipsum dolor, sit amet consectetur
+                    adipisicing
+                    elit. Consequatur magnam soluta optio maiores distinctio harum totam illo sunt, necessitatibus
+                    laboriosam
+                    adipisci inventore fugit quis, quas sint, nam voluptatibus. Veritatis, suscipit?Lorem ipsum dolor
+                    sit
+                    amet, consectetur adipisicing elit. Odio unde cum, corrupti totam, reiciendis sequi nostrum incidunt
+                    quos, perspiciatis id temporibus voluptas eligendi itaque tempora? Voluptatem est atque vero
+                    consectetur.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio aliquid facilis, deleniti distinctio
+                    iusto
+                    ipsum ipsa totam maiores dolorum earum dolore cupiditate quasi reprehenderit corrupti officia rerum?
+                    Enim, et ab! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio natus culpa
+                    dolores
+                    saepe, nemo voluptate suscipit perspiciatis harum porro. Ipsam dolores animi quasi suscipit iste
+                    nesciunt
+                    veritatis, asperiores quos provident!</p>
+                <hr class="hrPost">
+            </article>
+
+            <article>
+                <h2 class="titlePost">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <h3 class="headerPost">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sit,
+                    consequatur est qui nobis non, dolores
+                    provident eum, voluptatibus sed corporis et repellendus commodi placeat ipsam inventore fugiat
+                    laborum
+                    officiis.
+                </h3>
+                <h4 class="postedBy">Posted by Author@Author.com on 2018/05 00:00</h4>
+                <p class="textoPost">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur magnam soluta
+                    optio maiores distinctio
+                    harum totam illo sunt, necessitatibus laboriosam adipisci inventore fugit quis, quas sint, nam
+                    voluptatibus.
+                    Veritatis, suscipit?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio unde cum,
+                    corrupti
+                    totam, reiciendis sequi nostrum incidunt quos, perspiciatis id temporibus voluptas eligendi itaque
+                    tempora?
+                    Voluptatem est atque vero consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Odio
+                    aliquid facilis, deleniti distinctio iusto ipsum ipsa totam maiores dolorum earum dolore cupiditate
+                    quasi
+                    reprehenderit corrupti officia rerum? Enim, et ab! Lorem, ipsum dolor sit amet consectetur
+                    adipisicing
+                    elit. Distinctio natus culpa dolores saepe, nemo voluptate suscipit perspiciatis harum porro. Ipsam
+                    dolores
+                    animi quasi suscipit iste nesciunt veritatis, asperiores quos provident! Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit. Consequatur magnam soluta optio maiores distinctio harum totam illo
+                    sunt,
+                    necessitatibus laboriosam adipisci inventore fugit quis, quas sint, nam voluptatibus. Veritatis,
+                    suscipit?Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit. Odio unde cum, corrupti totam, reiciendis sequi
+                    nostrum
+                    incidunt quos, perspiciatis id temporibus voluptas eligendi itaque tempora? Voluptatem est atque
+                    vero
+                    consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio aliquid facilis,
+                    deleniti
+                    distinctio iusto ipsum ipsa totam maiores dolorum earum dolore cupiditate quasi reprehenderit
+                    corrupti
+                    officia rerum? Enim, et ab! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                    natus
+                    culpa dolores saepe, nemo voluptate suscipit perspiciatis harum porro. Ipsam dolores animi quasi
+                    suscipit
+                    iste nesciunt veritatis, asperiores quos provident! Lorem ipsum dolor, sit amet consectetur
+                    adipisicing
+                    elit. Consequatur magnam soluta optio maiores distinctio harum totam illo sunt, necessitatibus
+                    laboriosam
+                    adipisci inventore fugit quis, quas sint, nam voluptatibus. Veritatis, suscipit?Lorem ipsum dolor
+                    sit
+                    amet, consectetur adipisicing elit. Odio unde cum, corrupti totam, reiciendis sequi nostrum incidunt
+                    quos, perspiciatis id temporibus voluptas eligendi itaque tempora? Voluptatem est atque vero
+                    consectetur.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio aliquid facilis, deleniti distinctio
+                    iusto
+                    ipsum ipsa totam maiores dolorum earum dolore cupiditate quasi reprehenderit corrupti officia rerum?
+                    Enim, et ab! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio natus culpa
+                    dolores
+                    saepe, nemo voluptate suscipit perspiciatis harum porro. Ipsam dolores animi quasi suscipit iste
+                    nesciunt
+                    veritatis, asperiores quos provident!</p>
+                <hr class="hrPost">
+            </article>
+
+            <article>
+                <h2 class="titlePost">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <h3 class="headerPost">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sit,
+                    consequatur est qui nobis non, dolores
+                    provident eum, voluptatibus sed corporis et repellendus commodi placeat ipsam inventore fugiat
+                    laborum
+                    officiis.
+                </h3>
+                <h4 class="postedBy">Posted by Author@Author.com on 2018/05 00:00</h4>
+                <p class="textoPost">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur magnam soluta
+                    optio maiores distinctio
+                    harum totam illo sunt, necessitatibus laboriosam adipisci inventore fugit quis, quas sint, nam
+                    voluptatibus.
+                    Veritatis, suscipit?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio unde cum,
+                    corrupti
+                    totam, reiciendis sequi nostrum incidunt quos, perspiciatis id temporibus voluptas eligendi itaque
+                    tempora?
+                    Voluptatem est atque vero consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Odio
+                    aliquid facilis, deleniti distinctio iusto ipsum ipsa totam maiores dolorum earum dolore cupiditate
+                    quasi
+                    reprehenderit corrupti officia rerum? Enim, et ab! Lorem, ipsum dolor sit amet consectetur
+                    adipisicing
+                    elit. Distinctio natus culpa dolores saepe, nemo voluptate suscipit perspiciatis harum porro. Ipsam
+                    dolores
+                    animi quasi suscipit iste nesciunt veritatis, asperiores quos provident! Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit. Consequatur magnam soluta optio maiores distinctio harum totam illo
+                    sunt,
+                    necessitatibus laboriosam adipisci inventore fugit quis, quas sint, nam voluptatibus. Veritatis,
+                    suscipit?Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit. Odio unde cum, corrupti totam, reiciendis sequi
+                    nostrum
+                    incidunt quos, perspiciatis id temporibus voluptas eligendi itaque tempora? Voluptatem est atque
+                    vero
+                    consectetur. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio aliquid facilis,
+                    deleniti
+                    distinctio iusto ipsum ipsa totam maiores dolorum earum dolore cupiditate quasi reprehenderit
+                    corrupti
+                    officia rerum? Enim, et ab! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                    natus
+                    culpa dolores saepe, nemo voluptate suscipit perspiciatis harum porro. Ipsam dolores animi quasi
+                    suscipit
+                    iste nesciunt veritatis, asperiores quos provident! Lorem ipsum dolor, sit amet consectetur
+                    adipisicing
+                    elit. Consequatur magnam soluta optio maiores distinctio harum totam illo sunt, necessitatibus
+                    laboriosam
+                    adipisci inventore fugit quis, quas sint, nam voluptatibus. Veritatis, suscipit?Lorem ipsum dolor
+                    sit
+                    amet, consectetur adipisicing elit. Odio unde cum, corrupti totam, reiciendis sequi nostrum incidunt
+                    quos, perspiciatis id temporibus voluptas eligendi itaque tempora? Voluptatem est atque vero
+                    consectetur.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio aliquid facilis, deleniti distinctio
+                    iusto
+                    ipsum ipsa totam maiores dolorum earum dolore cupiditate quasi reprehenderit corrupti officia rerum?
+                    Enim, et ab! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio natus culpa
+                    dolores
+                    saepe, nemo voluptate suscipit perspiciatis harum porro. Ipsam dolores animi quasi suscipit iste
+                    nesciunt
+                    veritatis, asperiores quos provident!</p>
+                <hr class="hrPost">
+            </article>
+
+
+        </section>
+
+        <footer>
+            <hr>
+            <p>2018 - Mauricio Cerizza - 3ero C - Laboratorio de Computación III</p>
+        </footer>
+
+        <img src="./img/InternetSlowdown_Day.gif" alt="loading" class="imgLoadingInvisible" id="imgLoading">
+    </div>
+</body>
+
+</html>

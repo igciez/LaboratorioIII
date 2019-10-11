@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./JS/jquery-3.3.1.min.js"></script>
+    <script src="./JS/index.js"></script>
+    <link rel="stylesheet" href="./CSS/estiloIndex.css">
+    <title>WEB PAGE CLASE REPASO</title>
+</head>
+
+<body>
+    <div class="principal">
+        
+        <table id="tabla">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>Legajo</th>
+                    <th>Nombre</th>                    
+                    <th>Materia</th>
+                    <th>Nota</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        <div class="divNuevoPost" id="divNuevoPost">
+            <h2 class="nuevoPostTitle">Modificar Nota</h2>
+            <hr class="separadorNewPost">
+            <input type="hidden" name="index" id="indexAlumno">
+            <label for="txtLegajo" class="lblNewPost">Legajo</label>
+            <br/>
+            <input type="number" name="txtLegajo" id="txtLegajo" class="txtNewPost">
+            <br/>
+            <label for="txtNombre" class="lblNewPost">Nombre</label>
+            <br/>
+            <input type="text" name="txtNombre" id="txtNombre" class="txtNewPost">
+            <br/>
+            <label for="txtMateria" class="lblNewPost">Materia</label>
+            <br/>
+            <input type="text" name="txtMateria" id="txtMateria" class="txtNewPost">
+            <br/>
+            <label for="txtNota" class="lblNewPost">Nota</label>
+            <br/>
+            <input type="number" name="txtNota" id="txtNota" class="txtNewPost">
+            <br/>
+            <hr class="separadorNewPost">            
+            <input type="button" class="btnPostear" value="Cerrar" onclick="Cerrar()">
+            <input type="button" class="btnPostear" value="Guardar" onclick="Guardar()">
+        </div>
+
+        <footer>
+            <hr>
+            <p>2018 - Mauricio Cerizza - 3ero C - Laboratorio de Computación III</p>
+        </footer>
+
+        <img src="./img/InternetSlowdown_Day.gif" alt="loading" class="imgLoading" id="imgLoading">
+    </div>
+</body>
+
+</html>

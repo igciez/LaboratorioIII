@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./JS/jquery-3.3.1.min.js"></script>
+    <script src="./JS/login.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./CSS/estiloLogin.css" type="text/css">
+    <title>Login Clase Repaso</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <img src="./img/utn.png" alt="utn-logo" class="utnLogo">
+        <input type="text" class="txt" id="txtUser" placeholder="Email">
+        <br/>
+        <input type="password" class="txt" id="txtPass" placeholder="Password">
+        <br/>
+        <input type="button" name="btnSingIn" id="btnSingIn" class="btnSingIn" value="Sing In" onclick="loguear()">
+        <br/>
+        <p class="info" id="info"></p>
+    </div>
+
+    <img src="./img/loader.gif" alt="loading" hidden class="imgLoading" id="imgLoader">
+</body>
+
+</html>

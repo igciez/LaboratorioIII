@@ -1,0 +1,72 @@
+body{
+    background-image: url('../img/utn.png');
+    background-size: auto;
+}
+
+.contenedor{
+    position: fixed;
+    margin: 200px auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    border: 2px solid black;
+    text-align: center;
+    width: 250px;
+    padding: 20px;
+    background-color: whitesmoke;
+    
+}
+
+.btnSingIn{
+    width: 230px;
+    height: 30px;
+    background-color: rgb(240, 167, 58);
+    border: 0;
+    border-radius: 5px;
+    margin: 5px;
+    margin-top: 10px;
+    color: white;
+}
+
+.btnSingIn:hover{
+    background-color: orange;
+    cursor: pointer;
+}
+
+.contenedor .txt{
+    margin: 5px;
+    width: 230px;
+    height: 25px;
+    border-radius: 3px;
+    border: 1px solid lightslategrey;
+    padding-left: 5px;
+}
+
+.txt:focus { 
+    outline: none !important;
+    border: 1px solid orange;
+    box-shadow: 0 0 10px orange;
+}
+
+
+.utnLogo{
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.imgLoadingInvisible {
+    visibility: hidden;
+    position: fixed;
+}
+
+.imgLoadingVisible {
+    position: fixed;
+    margin: 300px auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
