@@ -1,47 +1,51 @@
 let xhr = new XMLHttpRequest();
 let spin = `<img  class="imgLoading" src="./img/InternetSlowdown_Day.gif" alt="no foto" height="42" width="42">`;
+let data = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    let auxPersona;
 
     xhr.open("GET", "http://localhost:3000/personas", true);
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4 && xhr.status === 200) {
-
             let response = JSON.parse(xhr.responseText);
-            console.dir(response)
+
             if (response.type === "error") {
                 console.log("No anda");
             }
             else {
                 console.log("entra al servidor");
-                response.forEach(element => {
-                    auxPersona = `<article class="article" id="article" onclick="selectedCard(this)" >
-                    <img class="imgUser" src="./img/user.png" alt="no imagen" height="42" width="42"/>
-                    <div class="content-tex" >
-                    <h2 class="txt" >${element.nombre}</h2>   
-                    <h3 class="txt">${element.apellido}</h3>
-                    <h4 class="txt" >${element.sexo} </h4>
-                    </div>
-                    </article>`;
-                    document.getElementById("cards").innerHTML += auxPersona;
-                });
+                data = response;
+                cargarPersona(data);
             }
         }
     }
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send();
-
 });
 
-const selectedCard = (e) => {
+const cargarPersona = (argData) => {
+    let auxPersona;
+    document.getElementById("cards").innerHTML = "";
+    argData.forEach(element => {
+        auxPersona = `<article class="article" id="article" onclick="selectedCard(this, '${element.nombre}','${element.apellido}','${element.sexo}','${element.id}' )" >
+        <img class="imgUser" src="./img/user.png" alt="no imagen" height="42" width="42"/>
+        <div class="content-text" >
+        <h2 class="txt" >${element.nombre}</h2>   
+        <h3 class="txt">${element.apellido}</h3>
+        <h4 class="txt" >${element.sexo} </h4>
+        </div>
+        </article>`;
+        document.getElementById("cards").innerHTML += auxPersona;
+    });
+}
+
+const selectedCard = (e, name, lastName, sexo, id) => {
     let datos = {
-        nombre: e.childNodes[3].childNodes[1].innerText,
-        apellido: e.childNodes[3].childNodes[3].innerText,
-        sexo: e.childNodes[3].childNodes[5].innerText
+        nombre: name,
+        apellido: lastName,
+        sexo: sexo,
+        id: id
     }
-    console.dir(datos);
     let form = `<section id="form" class="form" >
     <label class="lbltxt">Nombre</label>
     <input type="text" name="nombre" id="nombrePost" class="texto" value="${datos.nombre}" />
@@ -52,45 +56,64 @@ const selectedCard = (e) => {
     <label for="sexo" class="textolbl">Femenino</label>
     <input type="radio" name="sexo" value="masculino" ${datos.sexo === "Male" ? "checked" : ""}>
     <label for="sexo" class="textolbl">Masculino</label>
-    <button id="eliminar" class="btnSingIn" onclick="modificar(this)">Eliminar</button>
-    <button id="modificar" class="btnSingIn" onclick="borrar(this)">Modificar</button>
+    <button id="eliminar" class="btnSingIn" onclick="modificarPersona(this, '${datos.id}')">Modificar</button>
+    <button id="modificar" class="btnSingIn" onclick="borrarPersona(this, '${datos.id}')">Eliminar</button>
     </section>`;
     document.getElementById("cards").innerHTML += form;
-    
 }
 
-const modificar=(e)=>{
-    let datos = {
+const modificarPersona = (e, id) => {
+    let auxData = [];
+    let auxDatos = {
         nombre: document.getElementById("nombrePost").value,
         apellido: document.getElementById("apellidoPost").value,
-        sexo:"Male"
-    }
+        sexo: "Male",
+        id: id
+    };
 
-    console.dir(datos);
-
-    if (validarPost(datos)) {
+    if (validarPost(auxDatos)) {
         document.getElementById("form").innerHTML = spin;
         xhr.open("POST", "http://localhost:3000/editar", true);
         xhr.onreadystatechange = () => {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 let response = JSON.parse(xhr.responseText);
-                console.dir(response)
+                
                 if (response.type === "error") {
                     console.log("No anda");
                 }
                 else {
                     console.log("entra al servidor:POST");
-                    console.dir(response);
+                    auxData = data.filter(element => {
+                        if (parseInt(element.id) === parseInt(auxDatos.id)) {
+                            return (
+                                element.nombre = auxDatos.nombre,
+                                element.apellido = auxDatos.apellido,
+                                element.sexo = auxDatos.sexo,
+                                element.id = auxDatos.id
+                            );
+                        } else {
+                            return true;
+                        }
+                    });
+                    cargarPersona(auxData);
                 }
             }
         }
         xhr.setRequestHeader("Content-Type", "application/json");
-        xhr.send(JSON.stringify(datos));
+        xhr.send(JSON.stringify(auxDatos));
     }
 }
 
+const borrarPersona = (e, id) => {
+    let auxData = data.filter(element => (
+        parseInt(element.id) !== parseInt(id)
+    ));
+    data=auxData;
+    cargarPersona(auxData);
+}
+
 const validarPost = (datosPost) => {
-    if (datosPost.nombre === "" || datosPost.apellido === "" ) {
+    if (datosPost.nombre === "" || datosPost.apellido === "") {
         alert("ERROR: Debe llenar los campos.");
         return false;
     }
