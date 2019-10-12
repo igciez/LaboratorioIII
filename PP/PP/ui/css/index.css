@@ -25,25 +25,26 @@ body{
 .article{
     margin: 1rem auto;
     background-color: whitesmoke;
-    width: 30vw;
+    width: 30%;
     cursor: pointer;
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
 }
 
 .imgUser{
-    width: 5rem;
+    width: 4rem;
     height: 5rem;
     justify-self: flex-start;
-    background-color: blue;
+    flex-grow: 1;
 }
 
 .content-text{
-   margin: 1rem;
+    margin: 1rem;    
+    flex-grow: 4;
     justify-self: flex-end;
     display: flex;
     flex-direction: column;
-    background-color: purple;
+    align-items: flex-end;
 }
 
 .txt{

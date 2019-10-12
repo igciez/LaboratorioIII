@@ -30,9 +30,9 @@ const cargarPersona = (argData) => {
         auxPersona = `<article class="article" id="article" onclick="selectedCard(this, '${element.nombre}','${element.apellido}','${element.sexo}','${element.id}' )" >
         <img class="imgUser" src="./img/user.png" alt="no imagen" height="42" width="42"/>
         <div class="content-text" >
-        <h2 class="txt" >${element.nombre}</h2>   
-        <h3 class="txt">${element.apellido}</h3>
-        <h4 class="txt" >${element.sexo} </h4>
+            <h2 class="txt" >${element.nombre}</h2>   
+            <h3 class="txt">${element.apellido}</h3>
+            <h4 class="txt" >${element.sexo} </h4>
         </div>
         </article>`;
         document.getElementById("cards").innerHTML += auxPersona;
