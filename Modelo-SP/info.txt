@@ -1,0 +1,7 @@
+----------
+Comandos:
+----------
+
+1)yarn init
+
+2) yarn add jquery
